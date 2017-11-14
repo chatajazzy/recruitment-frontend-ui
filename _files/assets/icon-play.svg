@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="34px" height="45px" viewBox="0 0 34 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-play</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="-11.0560318%" y1="81.7051439%" x2="100%" y2="28.7719727%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" stop-opacity="-0.133862726" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <path d="M32.850317,20.1869267 L3.70917892,0.530014423 C1.98037634,-0.44456254 0,-0.343412048 0,3.15511053 L0,41.8620321 C0,45.0603144 2.12457105,45.5644613 3.70917892,44.4871283 L32.850317,24.830216 C34.0498943,23.5473708 34.0498943,21.4697718 32.850317,20.1869267" id="path-2"></path>
+    </defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-726.000000, -75.000000)" fill-rule="nonzero">
+            <g id="icon-play" transform="translate(726.000000, 75.000000)">
+                <g id="play">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
+                    <use fill-opacity="0.2" fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
