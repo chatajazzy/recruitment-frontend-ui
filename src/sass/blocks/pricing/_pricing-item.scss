@@ -25,7 +25,7 @@
         height: 127px;
         margin: 0 0 15px;
         padding: 0 0 15px;
-        border-bottom: 1px solid rgba($color: $dark-gray, $alpha: 0.1);
+        border-bottom: 1px solid $light-gray;
     }
     &__currency,
     &__price-details {
