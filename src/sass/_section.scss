@@ -2,7 +2,7 @@
     background-color: $white;
     padding: 100px 0;
     transform: skew(0deg, -10deg) translateY(-180px);
-    @include min-screen(1024px) {
+    @include min-screen($bp-l) {
         padding: 200px 0;
     }
     &:first-of-type {
@@ -30,10 +30,10 @@
         font-size: 25px;
         font-weight: bold;
         line-height: 1.5;
-        @include min-screen(480px) {
+        @include min-screen($bp-s) {
             font-size: 32px;
         }
-        @include min-screen(768px) {
+        @include min-screen($bp-m) {
             font-size: 44px;
             line-height: 1.7;
         }
@@ -45,7 +45,7 @@
         color: $white2;
         font-size: 16px;
         line-height: 1.5;
-        @include min-screen(768px) {
+        @include min-screen($bp-m) {
             font-size: 18px;
             line-height: 1.7;
         }
