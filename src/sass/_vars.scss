@@ -1,0 +1,30 @@
+@font-face {
+    font-family: NunitoSans;
+    src: local("NunitoSans-Regular"), local("NunitoSans-Regular"), url('../fonts/NunitoSans-Regular.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: NunitoSans;
+    src: local("NunitoSans-Bold"), local("NunitoSans-Bold"), url('../fonts/NunitoSans-Bold.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: NunitoSans;
+    src: local("NunitoSans-Italic"), local("NunitoSans-Italic"), url('../fonts/NunitoSans-Italic.ttf');
+    font-style: italic;
+}
+
+// Fonts
+$font-sans-serif: NunitoSans, sans-serif;
+$font-primary   : $font-sans-serif;
+
+// Colors
+$white    : #ffffff;
+$blue     : #3B81E5;
+$blue2    : #5DBCD2;
+$dark-blue: #4222DD;
+$green    : #55CA83;
+$dark-gray: #2C3443;
+$orange   : #ffc677;

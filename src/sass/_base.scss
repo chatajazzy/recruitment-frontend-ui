@@ -1,0 +1,36 @@
+@import '../css/reset';
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background: $white;
+    font-family: $font-primary;
+    font-weight: normal;
+}
+
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $white;
+    font-weight: normal;
+}
+
+img {
+    max-width: 100%;
+}
