@@ -1,0 +1,14 @@
+.header {
+    padding: 100px 0;
+    transform: skew(0deg, 10deg) translateY(-120px);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20px;
+    z-index: 1;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

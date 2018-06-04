@@ -1,0 +1,11 @@
+.logo {
+    &__link {
+        color: $white;
+        opacity: 0.85;
+        transition: all 0.3s ease-in-out;
+        &:active,        
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
