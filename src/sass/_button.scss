@@ -1,0 +1,39 @@
+.button {
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 4px;
+    background: none;
+    border: 1px solid transparent;
+    padding: 12px 20px;
+    color: $white;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    max-width: 165px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    &:hover,
+    &:active {
+        opacity: 0.5;
+    }
+    &--light {
+        background: $white;
+        color: $blue;
+        border-color: $white;
+    }
+    &--dark {
+        background: $blue;
+        border-color: $blue;
+    }
+    &--primary {
+        box-shadow: $box-shadow-default;
+    }
+    &--secondary {
+        border: 1px solid $white2;
+        color: $white2;
+    }
+    &--gray {
+        border: 1px solid $light-gray;
+        color: $light-gray;
+    }
+}

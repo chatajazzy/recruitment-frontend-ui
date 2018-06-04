@@ -1,0 +1,25 @@
+.cta-btns {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include min-screen(370px) {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+    }
+    &--center {
+        justify-content: center;
+    }
+    &--margin {
+        margin-top: 75px;
+    }
+    &__btn {
+        white-space: nowrap;
+        &:first-of-type {
+            margin-bottom: 15px;
+            @include min-screen(370px) {
+                margin: 0 15px 0 0;
+            }
+        }
+    }
+}

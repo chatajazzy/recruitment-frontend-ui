@@ -1,0 +1,86 @@
+.hero {
+    display: flex;
+    &__content {
+        @include min-screen(768px) {
+            width: 70%;
+        }
+        @include min-screen(1024px) {
+            width: 40%;
+        }
+    }
+    &__shapes {
+        position: relative;
+        right: 0;
+        @include min-screen(768px) {
+            width: 30%;
+        }
+        @include min-screen(1024px) {
+            width: 60%;
+        }
+    }
+    &__shape {
+        svg {
+            display: none;
+            @include min-screen(768px) {
+                display: block;
+                width: 50px;
+                height: 50px;
+                position: absolute;
+            }
+        }
+        &:nth-of-type(1) {
+            svg {
+                top: -10%;
+                left: 10%;
+                transform: rotate(-15deg);
+            }
+        }
+        &:nth-of-type(2) {
+            svg {
+                transform: rotate(-10deg);
+                top: 45%;
+                left: 20%;
+                width: 80px;
+                height: 80px;
+                g {
+                    fill: $dark-blue;
+                }
+            }
+        }
+        &:nth-of-type(3) {
+            svg {
+                transform: rotate(-10deg);
+                top: 5%;
+                left: 30%;
+                width: 180px;
+                height: 180px;
+            }
+        }
+        &:nth-of-type(4) {
+            svg {
+                transform: rotate(-10deg);
+                top: -10%;
+                left: 65%;
+                width: 180px;
+                height: 180px;
+                opacity: 0.5;
+            }
+        }
+        &:nth-of-type(5) {
+            svg {
+                top: 30%;
+                left: 80%;
+            }
+        }
+        &:nth-of-type(6) {
+            svg {
+                transform: rotate(-10deg);
+                top: -25%;
+                left: 100%;
+                width: 180px;
+                height: 180px;
+                opacity: 0.25;
+            }
+        }
+    }
+}
