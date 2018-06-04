@@ -1,0 +1,63 @@
+.pricing-item {
+    background: $white;
+    box-shadow: $box-shadow-default;
+    margin-bottom: 30px;
+    flex-grow: 0;
+    flex-basis: 48%;
+    transition: all 0.3s ease-in-out;
+    @include min-screen($bp-l) {
+        flex-basis: 23.5%;
+    }
+    &:hover {
+        transform: scaleY(1.1) scaleX(1.2);
+    }
+    &__name,
+    &__price-box {
+        text-align: center;
+    }
+    &__name {
+        font-weight: bold;
+        font-size: 18px;
+        padding: 25px 25px 10px;
+    }
+    &__price-box {
+        position: relative;
+        height: 127px;
+        margin: 0 0 15px;
+        padding: 0 0 15px;
+        border-bottom: 1px solid rgba($color: $dark-gray, $alpha: 0.1);
+    }
+    &__currency,
+    &__price-details {
+        font-size: 14px;
+        color: $gray;
+    }
+    &__currency {
+        position: absolute;
+        top: 10px;
+        left: -15px;
+        font-weight: normal;
+    }
+    &__price {
+        color: $blue;
+        font-weight: bold;
+        font-size: 60px;
+        position: relative;
+        &--premise {
+            font-size: 38px;
+            position: absolute;
+            top: calc(50% - 10px);
+            right: 0;
+            left: 0;
+            transform: translateY(-50%);
+        }
+    }
+    &__price-details {
+        display: block;
+        position: relative;
+        top: -10px;
+    }
+    &__info-list {
+        padding: 15px 35px;
+    }
+}
