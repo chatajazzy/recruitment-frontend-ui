@@ -12,7 +12,7 @@
         opacity: 0.65;
         transition: all 0.3s ease-in-out;
         &:last-of-type {
-            @include min-screen(1024px) {
+            @include min-screen($bp-l) {
                 padding-right: 0;
             }
         }

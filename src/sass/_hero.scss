@@ -1,27 +1,27 @@
 .hero {
     display: flex;
     &__content {
-        @include min-screen(768px) {
+        @include min-screen($bp-m) {
             width: 70%;
         }
-        @include min-screen(1024px) {
+        @include min-screen($bp-l) {
             width: 40%;
         }
     }
     &__shapes {
         position: relative;
         right: 0;
-        @include min-screen(768px) {
+        @include min-screen($bp-m) {
             width: 30%;
         }
-        @include min-screen(1024px) {
+        @include min-screen($bp-l) {
             width: 60%;
         }
     }
     &__shape {
         svg {
             display: none;
-            @include min-screen(768px) {
+            @include min-screen($bp-m) {
                 display: block;
                 width: 50px;
                 height: 50px;

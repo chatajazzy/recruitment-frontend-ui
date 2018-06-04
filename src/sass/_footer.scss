@@ -7,7 +7,7 @@
         top: 0;
         bottom: 0;
         z-index: -1;
-        @include min-screen(768px) {
+        @include min-screen($bp-m) {
             display: block;
         }
     }
@@ -23,12 +23,11 @@
                 height: 100px;
                 top: 10%;
                 left: 5%;
-                transform: rotate(-45deg);  
+                transform: rotate(-45deg);
                 g {
-                    fill: $green; 
+                    fill: $green;
                 }
             }
-     
         }
         &:nth-of-type(2) {
             svg {
@@ -36,7 +35,7 @@
                 top: -15%;
                 right: 0;
                 g {
-                    fill: $blue; 
+                    fill: $blue;
                 }
             }
         }
@@ -46,7 +45,7 @@
                 top: 110%;
                 right: 15%;
                 g {
-                    fill: $dark-blue; 
+                    fill: $dark-blue;
                 }
             }
         }
