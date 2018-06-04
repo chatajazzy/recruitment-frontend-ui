@@ -1,0 +1,54 @@
+.footer {
+    position: relative;
+    &__shapes {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        @include min-screen(768px) {
+            display: block;
+        }
+    }
+    &__shapes-item {
+        svg {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+        }
+        &:nth-of-type(1) {
+            svg {
+                width: 100px;
+                height: 100px;
+                top: 10%;
+                left: 5%;
+                transform: rotate(-45deg);  
+                g {
+                    fill: $green; 
+                }
+            }
+     
+        }
+        &:nth-of-type(2) {
+            svg {
+                transform: rotate(30deg);
+                top: -15%;
+                right: 0;
+                g {
+                    fill: $blue; 
+                }
+            }
+        }
+        &:nth-of-type(3) {
+            svg {
+                transform: rotate(-30deg);
+                top: 110%;
+                right: 15%;
+                g {
+                    fill: $dark-blue; 
+                }
+            }
+        }
+    }
+}
