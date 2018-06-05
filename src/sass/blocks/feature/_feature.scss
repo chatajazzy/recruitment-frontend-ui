@@ -1,0 +1,20 @@
+.feature {
+    margin-bottom: 150px;
+    @include min-screen(768px) {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 200px;
+    }
+    &--reverse {
+        flex-direction: row-reverse;
+        margin-top: 50px;
+    }
+}
+
+.feature-info,
+.feature-graphics {
+    @include min-screen(768px) {
+        flex-grow: 0;
+        flex-basis: 45%;
+    }
+}

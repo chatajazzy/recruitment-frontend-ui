@@ -17,27 +17,31 @@
 }
 
 // Fonts
-$font-sans-serif: NunitoSans, sans-serif;
-$font-primary   : $font-sans-serif;
-
+$font-sans-serif: NunitoSans,
+sans-serif;
+$font-primary: $font-sans-serif;
 // Colors
-$black     : #000000;
-$white     : #ffffff;
-$white2    : rgba($color: $white, $alpha: 0.75);
-$blue      : #3B81E5;
-$blue2     : #5DBCD2;
-$dark-blue : #4222DD;
-$dark-gray : #2C3443;
-$light-gray: rgba($color: $black, $alpha: 0.25);
-$gray      : rgba($color: $dark-gray, $alpha: 0.75);
-$green     : #55CA83;
-$orange    : #ffc677;
-
+$black: #000000;
+$white: #ffffff;
+$white2: rgba($color: $white,
+$alpha: 0.75);
+$blue: #3B81E5;
+$blue2: #5DBCD2;
+$dark-blue: #4222DD;
+$dark-gray: #2C3443;
+$light-gray: rgba($color: $black,
+$alpha: 0.25);
+$light-gray2: rgba($color: $black,
+$alpha: 0.5);
+$gray: rgba($color: $dark-gray,
+$alpha: 0.75);
+$green: #55CA83;
+$orange: #ffc677;
 // Other
-$box-shadow-default: 0 0 20px rgba($color: $black, $alpha: 0.3);
-
+$box-shadow-default: 0 0 20px rgba($color: $black,
+$alpha: 0.3);
 // Breakpoints
-$bp-s : 480px;
-$bp-m : 768px;
-$bp-l : 1024px;
+$bp-s: 480px;
+$bp-m: 768px;
+$bp-l: 1024px;
 $bp-xl: 1320px;

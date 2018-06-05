@@ -1,19 +1,20 @@
 @import "vars";
-
 @import "mixins/media-queries";
-
 @import "base";
-
-@import "button";
-@import "footer";
-@import "header";
-@import "hero";
-@import "container";
-@import "cta-btns";
-@import "logo";
-@import "nav";
-@import "pricing";
-@import "pricing-info-item";
-@import "pricing-item";
-@import "search";
-@import "section";
+@import "blocks/components/button";
+@import "blocks/components/logo";
+@import "blocks/components/progress";
+@import "blocks/components/select";
+@import "blocks/components/search";
+@import "blocks/container";
+@import "blocks/cta-btns";
+@import "blocks/feature/feature";
+@import "blocks/feature/feature-graphics";
+@import "blocks/footer";
+@import "blocks/header";
+@import "blocks/hero";
+@import "blocks/nav";
+@import "blocks/pricing/pricing";
+@import "blocks/pricing/pricing-info-item";
+@import "blocks/pricing/pricing-item";
+@import "blocks/section";

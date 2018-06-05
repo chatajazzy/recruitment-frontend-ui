@@ -1,0 +1,71 @@
+.progress {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    background: $white;
+    box-shadow: $box-shadow-default;
+    &:nth-child(2) {
+        .progress__bar {
+            width: 80%;
+        }
+    }
+    &:first-of-type {
+        border-bottom: 1px solid $light-gray2;
+        position: relative;
+        &:after {
+            content: '';
+            display: inline-block;
+            top: -35px;
+            right: -35px;
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            transform: rotate(-45deg);
+            background-image: url('../img/shape-triangle-blue.svg');
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+    }
+    &__wrapper {
+        background: $light-gray;
+        height: 4px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.19), 0 3px 3px rgba(0, 0, 0, 0.23);
+        border-radius: 2px;
+        width: 60%;
+    }
+    &__bar {
+        width: 20%;
+        height: 4px;
+        background: $dark-blue;
+        position: relative;
+        &:after {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: $dark-blue;
+            right: -12px;
+            top: -5px;
+        }
+        &:nth-child(2) {
+            width: 80%;
+        }
+        &:nth-of-type(2) {
+            width: 80%;
+        }
+    }
+    &__info {
+        width: 40%;
+        color: $light-gray2;
+    }
+    &__info-number {
+        width: 40%;
+        color: $dark-gray;
+        margin-top: 10px;
+        display: block;
+        font-weight: bold;
+    }
+}
