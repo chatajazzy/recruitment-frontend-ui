@@ -118,7 +118,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
     "use strict";
 
-    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_CardsSlider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/CardsSlider */ \"./modules/CardsSlider.js\");\n\r\n\r\ndocument.addEventListener('DOMContentLoaded', () => {\r\n  new _modules_CardsSlider__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\r\n});\r\n\n\n//# sourceURL=webpack:///./index.js?");
+    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_Loader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/Loader */ \"./modules/Loader.js\");\n/* harmony import */ var _modules_CardsSlider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/CardsSlider */ \"./modules/CardsSlider.js\");\n// eslint-disable\r\n\r\n\r\n\r\ndocument.addEventListener('DOMContentLoaded', () => {\r\n  const loader = new _modules_Loader__WEBPACK_IMPORTED_MODULE_0__[\"default\"](\r\n    document.querySelector('.loader__wrapper'), 'loader__wrapper--active'\r\n  );\r\n\r\n  loader.showLoader();\r\n\r\n  setTimeout(() => {\r\n    loader.hideLoader();\r\n  }, 2000);\r\n\r\n  new _modules_CardsSlider__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\r\n});\r\n\n\n//# sourceURL=webpack:///./index.js?");
 
     /***/
   },
@@ -133,6 +133,20 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     "use strict";
 
     eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return CardsSlider; });\nclass CardsSlider {\r\n  constructor() {\r\n    this.slidesDefault = document.querySelector('.cards-slider__slide--active');\r\n    this.slides = document.querySelectorAll('.cards-slider__slide');\r\n    this.navItems = document.querySelectorAll('.cards-slider__nav-item');\r\n\r\n    this.init();\r\n  }\r\n  bindEvents() {\r\n    this.slides.forEach(slide => slide.addEventListener('click', this.changeSlidesPosition));\r\n    this.navItems.forEach(navItem => navItem.addEventListener('click', this.changeSlidesPosition()));\r\n  }\r\n  changeSlidesPosition() {\r\n    const selectedSlide   = typeof this.dataset !== 'undefined' ?\r\n          this.dataset.slide : this.slidesDefault.dataset.slide,\r\n          slideWidth      = document.querySelector('.cards-slider__slide').offsetWidth,\r\n          cardWidth       = document.querySelector('.card').offsetWidth,\r\n          slidesContainer = document.querySelector('.cards-slider__slides-list'),\r\n          currentControl  = document.querySelector('.cards-slider__nav-item--active'),\r\n          newControl      = document.querySelector(`.cards-slider__nav-item[data-slide=\"${selectedSlide}\"]`);\r\n\r\n    let offset;\r\n\r\n    const getDesktopOffset = () => {\r\n      if (selectedSlide == 1) {\r\n        offset = ` ${slideWidth / 2 - (cardWidth * 1.5) + 20}px`;\r\n      } \r\n      else if (selectedSlide == 2) {\r\n        offset = `-${cardWidth * 2 + cardWidth * 1.5 - 30}px`;\r\n      } \r\n      else {\r\n        offset = `-${2 * slideWidth - cardWidth / 5 + 20}px`;\r\n      }\r\n\r\n      return offset;\r\n    }\r\n\r\n    const getMobileOffset = () => {\r\n      if (selectedSlide == 1) {\r\n        offset = '20px';\r\n      } \r\n      else if (selectedSlide == 2) {\r\n        offset = `-${(slideWidth - 20)}px`;\r\n      } \r\n      else {\r\n        offset = `-${7.5 * cardWidth}px`;\r\n      }\r\n\r\n      return offset;\r\n    }\r\n\r\n    const updateNav = (currentEl, newEl, prefix) => {\r\n      currentEl.classList.remove(prefix);\r\n      newEl.classList.add(prefix);\r\n    }\r\n\r\n    const updateOffset = (container, offset) => {\r\n      container.style.transform = `translate(${offset})`;\r\n    }\r\n\r\n    offset = window.screen.width < 1320 ? getMobileOffset() : getDesktopOffset();\r\n\r\n    updateNav(currentControl, newControl, 'cards-slider__nav-item--active');\r\n    updateOffset(slidesContainer, offset); \r\n  }\r\n  init() {\r\n    this.bindEvents();\r\n    this.changeSlidesPosition();\r\n  }\r\n}\r\n\n\n//# sourceURL=webpack:///./modules/CardsSlider.js?");
+
+    /***/
+  },
+
+  /***/"./modules/Loader.js":
+  /*!***************************!*\
+    !*** ./modules/Loader.js ***!
+    \***************************/
+  /*! exports provided: default */
+  /***/function modulesLoaderJs(module, __webpack_exports__, __webpack_require__) {
+
+    "use strict";
+
+    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Loader; });\nclass Loader {\r\n  constructor(loader, prefix) {\r\n    this.loader = loader;\r\n    this.prefix = prefix;\r\n\r\n    this.init(this.loader, this.prefix);\r\n  }\r\n  showLoader() {\r\n    this.loader.classList.add(this.prefix);\r\n  }\r\n  hideLoader() {\r\n    this.loader.classList.remove(this.prefix);\r\n\r\n    function fadeOut(el) {\r\n      el.style.opacity = 1;\r\n\r\n      (function fade() {\r\n        if ((el.style.opacity -= .1) < 0) {\r\n          el.style.display = 'none';\r\n        } else {\r\n          requestAnimationFrame(fade);\r\n        }\r\n      })();\r\n    }\r\n\r\n    fadeOut(this.loader);\r\n  }\r\n  init() {\r\n    this.showLoader();\r\n  }\r\n}\r\n\n\n//# sourceURL=webpack:///./modules/Loader.js?");
 
     /***/
   }
