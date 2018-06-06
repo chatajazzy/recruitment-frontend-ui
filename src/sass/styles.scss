@@ -2,10 +2,10 @@
 @import "mixins/media-queries";
 @import "base";
 @import "blocks/components/button";
-@import "blocks/components/logo";
+@import "blocks/components/card";
 @import "blocks/components/progress";
 @import "blocks/components/select";
-@import "blocks/components/search";
+@import "blocks/cards-slider";
 @import "blocks/container";
 @import "blocks/cta-btns";
 @import "blocks/feature/feature";
@@ -13,8 +13,10 @@
 @import "blocks/footer";
 @import "blocks/header";
 @import "blocks/hero";
+@import "blocks/logo";
 @import "blocks/nav";
 @import "blocks/pricing/pricing";
 @import "blocks/pricing/pricing-info-item";
 @import "blocks/pricing/pricing-item";
+@import "blocks/search";
 @import "blocks/section";
