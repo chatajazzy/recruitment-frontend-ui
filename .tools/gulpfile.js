@@ -19,8 +19,10 @@ const autoprefixer = require('autoprefixer'),
       sassLint     = require('gulp-sass-lint'),
       sourcemaps   = require('gulp-sourcemaps'),
       stylelint    = require('stylelint'),
-      uglify       = require('gulp-uglify');
-
+      uglify       = require('gulp-uglify'),
+      webpack      = require('webpack'),
+      webpackStream = require('webpack-stream');
+  
 const paths = {
     template: '../src/*.html',
     sass: '../src/sass/',
@@ -32,7 +34,7 @@ const paths = {
 }
 
 const esLintSettings = {
-    configFile: './.eslintrc'
+    configFile: './.eslintrc.json'
 };
 const sassLintSettings = {
     configFile: './.sass-lint.yml'
@@ -64,6 +66,7 @@ function scriptHelper(srcPath, buildPath, prefix) {
         .pipe(eslint.format())
         .pipe(eslint.failAfterError())
         .pipe(sourcemaps.init())
+        .pipe(webpackStream(require('./webpack.config.js'), webpack))
         .pipe(babel({
             presets: [
                 [envPreset, {
@@ -112,20 +115,20 @@ gulp.task('sass-lint', () => {
 });
 
 gulp.task('scripts', (event) => {
-    gulp.watch(paths.scripts + '/dev/*.js', event => {
+    gulp.watch(paths.scripts + '/**/*.js', event => {
         scriptHelper(event.path, paths.scripts, 'Processing script: ');
     });
 });
 
 gulp.task('watch', () => {
     gulp.watch(paths.sass + '/**', ['sass', 'sass-lint']);
-    gulp.watch(paths.scripts + '/dev/*.js', ['scripts']);
+    gulp.watch(paths.scripts + '/**/*.js', ['scripts']);
     gulp.watch(paths.template, browserSync.reload);
 });
 
 gulp.task('uglify', () => {
     return gulp
-        .src(paths.scripts + '/*.js')
+        .src(paths.scripts + '/main.js')
         .pipe(gulpif(!gutil.env.ci,
             plumber({
                 errorHandler: notify.onError('Error: <%= error.message %>')
@@ -196,4 +199,4 @@ gulp.task('build', resolve => {
     );
 });
 
-gulp.task('default', ['serve', 'watch']);
+gulp.task('default', ['serve', 'sass', 'scripts', 'watch']);
