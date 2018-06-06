@@ -1,34 +1,20 @@
 .progress {
     display: flex;
-    padding: 20px;
+    padding: 25px;
     align-items: center;
     background: $white;
     box-shadow: $box-shadow-default;
+    border-radius: 4px;
     &:nth-child(2) {
         .progress__bar {
             width: 80%;
         }
     }
     &:first-of-type {
-        border-bottom: 1px solid $light-gray2;
         position: relative;
-        &:after {
-            content: '';
-            display: inline-block;
-            top: -35px;
-            right: -35px;
-            width: 80px;
-            height: 80px;
-            position: absolute;
-            transform: rotate(-45deg);
-            background-image: url('../img/shape-triangle-blue.svg');
-            background-position: center;
-            background-size: 100%;
-            background-repeat: no-repeat;
-        }
     }
     &__wrapper {
-        background: $light-gray;
+        background: rgba($color: $black, $alpha: 0.15);
         height: 4px;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.19), 0 3px 3px rgba(0, 0, 0, 0.23);
         border-radius: 2px;
@@ -67,5 +53,6 @@
         margin-top: 10px;
         display: block;
         font-weight: bold;
+        letter-spacing: 1.2px;
     }
 }
