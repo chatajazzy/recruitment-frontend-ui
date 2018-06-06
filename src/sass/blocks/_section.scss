@@ -2,9 +2,6 @@
     background-color: $white;
     padding: 100px 0;
     transform: skew(0deg, -10deg) translateY(-180px);
-    @include min-screen($bp-l) {
-        padding: 200px 0;
-    }
     &:first-of-type {
         padding: 350px 0 100px;
     }
@@ -20,7 +17,7 @@
         text-align: center;
     }
     &__header {
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         &--no-margin {
             margin-bottom: 0;
         }
@@ -35,7 +32,6 @@
         }
         @include min-screen($bp-m) {
             font-size: 44px;
-            line-height: 1.7;
         }
         &--dark {
             color: $dark-gray;
