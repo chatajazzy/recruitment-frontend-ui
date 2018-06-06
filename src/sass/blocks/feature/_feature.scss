@@ -1,20 +1,38 @@
 .feature {
-    margin-bottom: 150px;
-    @include min-screen(768px) {
+    margin: 50px auto;
+    @include min-screen($bp-m) {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 200px;
     }
     &--reverse {
         flex-direction: row-reverse;
-        margin-top: 50px;
+        margin-top: 150px;
     }
 }
 
 .feature-info,
 .feature-graphics {
-    @include min-screen(768px) {
+    @include min-screen($bp-m) {
         flex-grow: 0;
         flex-basis: 45%;
     }
 }
+
+.feature-info {
+    @include min-screen($bp-xl) {
+        padding: 0 100px;
+     }
+    &:first-of-type {
+        margin: 50px 0;
+        @include min-screen($bp-m) {
+            margin: 0;
+        }
+    }
+}
+
+.feature-graphics { 
+    @include min-screen($bp-xl) {
+      left: 100px;
+    } 
+}
+
