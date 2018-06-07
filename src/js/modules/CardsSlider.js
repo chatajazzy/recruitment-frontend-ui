@@ -8,7 +8,7 @@ export default class CardsSlider {
   }
   bindEvents() {
     this.slides.forEach(slide => slide.addEventListener('click', this.changeSlidesPosition));
-    this.navItems.forEach(navItem => navItem.addEventListener('click', this.changeSlidesPosition()));
+    this.navItems.forEach(navItem => navItem.addEventListener('click', this.changeSlidesPosition));
   }
   changeSlidesPosition() {
     const selectedSlide   = typeof this.dataset !== 'undefined' ?
