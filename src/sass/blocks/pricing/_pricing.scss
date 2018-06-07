@@ -42,6 +42,7 @@
         @include min-screen($bp-m) {
             display: flex;
             flex-wrap: wrap;
+            margin-bottom: 100px;
         }
     }
     &__details-list-item {

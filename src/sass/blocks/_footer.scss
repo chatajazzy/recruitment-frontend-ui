@@ -1,5 +1,10 @@
 .footer {
     position: relative;
+    &.visible {
+        transform: skew(0deg, -10deg) translateY(0);
+        overflow: hidden;
+        min-height: 595px;    
+    }
     &__shapes {
         position: absolute;
         left: 0;
@@ -46,6 +51,32 @@
                 right: 15%;
                 g {
                     fill: $dark-blue;
+                }
+            }
+        }
+        &:nth-of-type(4) {
+            svg {
+                width: 200px;
+                height: 200px;
+                top: 80%;
+                left: -12%;
+                transform: rotate(-15deg);
+                opacity: 0.5;
+                g {
+                    fill: $light-gray;
+                }
+            }
+        }
+        &:nth-of-type(5) {
+            svg {
+                width: 200px;
+                height: 200px;
+                top: 80%;
+                right: -15%;
+                transform: rotate(-55deg);
+                opacity: 0.25;
+                g {
+                    fill: $blue;
                 }
             }
         }
