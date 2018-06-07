@@ -12,7 +12,7 @@ export default class CardsSlider {
   }
   changeSlidesPosition() {
     const selectedSlide   = typeof this.dataset !== 'undefined' ?
-          this.dataset.slide : this.slidesDefault.dataset.slide,
+            this.dataset.slide : this.slidesDefault.dataset.slide,
           slideWidth      = document.querySelector('.cards-slider__slide').offsetWidth,
           cardWidth       = document.querySelector('.card').offsetWidth,
           slidesContainer = document.querySelector('.cards-slider__slides-list'),
@@ -21,13 +21,13 @@ export default class CardsSlider {
 
     let offset;
 
-    const getDesktopOffset = () => {
+    const getDesktopOffset = () => { // eslint-disable-line one-var
       if (selectedSlide == 1) {
         offset = ` ${slideWidth / 2 - (cardWidth * 1.5) + 20}px`;
-      } 
+      }
       else if (selectedSlide == 2) {
         offset = `-${cardWidth * 2 + cardWidth * 1.5 - 30}px`;
-      } 
+      }
       else {
         offset = `-${2 * slideWidth - cardWidth / 5 + 20}px`;
       }
@@ -35,13 +35,13 @@ export default class CardsSlider {
       return offset;
     }
 
-    const getMobileOffset = () => {
+    const getMobileOffset = () => { // eslint-disable-line one-var
       if (selectedSlide == 1) {
         offset = '20px';
-      } 
+      }
       else if (selectedSlide == 2) {
         offset = `-${(slideWidth - 20)}px`;
-      } 
+      }
       else {
         offset = `-${7.5 * cardWidth}px`;
       }
@@ -49,19 +49,19 @@ export default class CardsSlider {
       return offset;
     }
 
-    const updateNav = (currentEl, newEl, prefix) => {
+    const updateNav = (currentEl, newEl, prefix) => { // eslint-disable-line one-var
       currentEl.classList.remove(prefix);
       newEl.classList.add(prefix);
     }
 
-    const updateOffset = (container, offset) => {
+    const updateOffset = (container, offset) => { // eslint-disable-line one-var
       container.style.transform = `translate(${offset})`;
     }
 
     offset = window.screen.width < 1320 ? getMobileOffset() : getDesktopOffset();
 
     updateNav(currentControl, newControl, 'cards-slider__nav-item--active');
-    updateOffset(slidesContainer, offset); 
+    updateOffset(slidesContainer, offset);
   }
   init() {
     this.bindEvents();

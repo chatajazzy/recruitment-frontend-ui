@@ -1,4 +1,4 @@
-import { fadeIn, makeCondition, revealSection } from '../_helpers';
+import { makeCondition, revealSection } from '../_helpers';
 
 export default () => {
   const heroContent    = document.querySelector('.hero__content'),
@@ -14,14 +14,13 @@ export default () => {
         pricingOffset  = offset + pricing.getBoundingClientRect().top,
         section1Offset = offset + section1.getBoundingClientRect().top,
         section2Offset = offset + section2.getBoundingClientRect().top,
-        section3Offset = offset + section3.getBoundingClientRect().top,
         section4Offset = offset + section4.getBoundingClientRect().top;
-  
+
   if (makeCondition(section4, offset, section4Offset)) {
     revealSection(section4);
   }
   else if (
-    !section3.classList.contains('visible') && 
+    !section3.classList.contains('visible') &&
     makeCondition(pricing, offset, pricingOffset)
   ) {
     revealSection(section3);
@@ -37,7 +36,7 @@ export default () => {
   else if (makeCondition(section1, offset, section1Offset)) {
     revealSection(section1);
   }
-  
+
   if (window.screen.width > 1320) {
     if (offset >= 50) {
       heroContent.style.transform = `translate(0, -${offset / 8}%`;
@@ -46,6 +45,6 @@ export default () => {
     else {
       heroContent.style.transform = 'none';
       heroShapes.style.transform = 'none';
-    }   
+    }
   }
 }
