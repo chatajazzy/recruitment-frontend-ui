@@ -8,7 +8,7 @@
         width: 80px;
         height: 80px;
         position: absolute;
-        bottom: -30px;
+        bottom: 0;
         left: -30px;
         z-index: 2;
         transform: rotate(-15deg);
@@ -63,7 +63,10 @@
         &--reverse {
             position: absolute;
             bottom: -30px;
-            right: 20%;
+            right: 0;
+            @include min-screen($bp-s) {
+                right: 20%;
+            }
             @include min-screen($bp-m) {
                 right: -25px;
             }

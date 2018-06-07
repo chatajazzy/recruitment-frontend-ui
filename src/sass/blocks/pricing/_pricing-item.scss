@@ -6,7 +6,17 @@
     flex-basis: 48%;
     transition: all 0.3s ease-in-out;
     @include min-screen($bp-l) {
+        position: relative;
+        opacity: 0;
+        transform: translateX(30px);
+        overflow: hidden;
         flex-basis: 23.5%;
+    }
+    &--is-showing {
+        @include min-screen($bp-l) {
+            opacity: 1;
+            transform: translateX(0);
+        }
     }
     &:hover {
         transform: scaleY(1.1) scaleX(1.2);

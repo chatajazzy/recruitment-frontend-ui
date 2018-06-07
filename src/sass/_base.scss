@@ -1,5 +1,4 @@
 @import '../css/reset.css';
-
 * {
     box-sizing: border-box;
 }
@@ -12,14 +11,11 @@ body {
     width: 100%;
 }
 
-html {
-    overflow-x: hidden;
-}
-
 body {
     background: $white;
     font-family: $font-primary;
     font-weight: normal;
+    overflow-x: hidden;
 }
 
 ul {

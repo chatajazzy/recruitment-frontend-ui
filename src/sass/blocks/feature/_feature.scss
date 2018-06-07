@@ -8,6 +8,22 @@
         flex-direction: row-reverse;
         margin-top: 150px;
     }
+    &:nth-child(1) {
+        .feature-info {
+            margin: 50px 0;
+            @include min-screen($bp-m) {
+                margin: 0;
+            }
+        }
+    }
+    &:nth-child(2) {
+        .feature-info {
+            margin: 150px 0;
+            @include min-screen($bp-m) {
+                margin: 0;
+            }
+        }
+    }
 }
 
 .feature-info,
@@ -21,18 +37,11 @@
 .feature-info {
     @include min-screen($bp-xl) {
         padding: 0 100px;
-     }
-    &:first-of-type {
-        margin: 50px 0;
-        @include min-screen($bp-m) {
-            margin: 0;
-        }
     }
 }
 
-.feature-graphics { 
+.feature-graphics {
     @include min-screen($bp-xl) {
-      left: 100px;
-    } 
+        left: 100px;
+    }
 }
-
