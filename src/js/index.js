@@ -1,5 +1,6 @@
-import Loader from './modules/Loader';
 import CardsSlider from './modules/CardsSlider';
+import Loader from './modules/Loader';
+import Parallax from './modules/Parallax';
 
 document.addEventListener('DOMContentLoaded', () => {
   const loader = new Loader(
@@ -13,4 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }, 2000);
 
   new CardsSlider();
+});
+
+document.addEventListener('scroll', () => {
+  Parallax();
 });

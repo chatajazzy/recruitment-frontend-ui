@@ -1,3 +1,5 @@
+import { fadeOut } from '../_helpers';
+
 export default class Loader {
   constructor(loader, prefix) {
     this.loader = loader;
@@ -10,19 +12,6 @@ export default class Loader {
   }
   hideLoader() {
     this.loader.classList.remove(this.prefix);
-
-    function fadeOut(el) {
-      el.style.opacity = 1;
-
-      (function fade() {
-        if ((el.style.opacity -= .1) < 0) {
-          el.style.display = 'none';
-        } else {
-          requestAnimationFrame(fade);
-        }
-      })();
-    }
-
     fadeOut(this.loader);
   }
   init() {
