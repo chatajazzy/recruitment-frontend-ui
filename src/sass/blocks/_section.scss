@@ -7,9 +7,7 @@
         padding: 350px 0 100px;
     }
     &--first {
-        @include min-screen($bp-xl) {
-            opacity: 1;
-        }
+        opacity: 1;
     }
     &--dark {
         background: rgba(46, 174, 251, 1);
